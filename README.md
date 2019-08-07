@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-# CHECK IN MY WEB : adityakemal.fun
+# CHECK IN MY WEB : https://adityakemal.fun
 
 ### `npm start`
 
