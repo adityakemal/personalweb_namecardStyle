@@ -1,33 +1,161 @@
-.App {
-  text-align: center;
+.mid-home {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 130px;
+    margin: auto;
+    text-align: center;
+    /* background-color: antiquewhite; */
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.mid-home h1 {
+    font-weight: 900;
+    font-size: 90px;
+    padding: 0;
+    letter-spacing: -0.1rem;
+    margin: 0;
+    /* display: inline-block; */
+    vertical-align: middle;
+    line-height: normal;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    top: -38px;
+    /* left: 60px; */
+    color: white;
+
+}
+p span {
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    /* color: white; */
+
 }
 
-.App-link {
-  color: #61dafb;
+* {
+    font-family: 'Raleway', sans-serif;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+    background-color: black;
+}
+
+a,
+ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin: 20px;
+    color: black;
+}
+
+.icons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+i {
+    transition: 0.3s;
+    font-size: 30px;
+    color: white;
+
+}
+i:hover {
+    transition: 0.4s;
+    font-size: 20px;
+}
+
+.bg-load {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.bg-load-start{
+  position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 999;
+}
+.bg-load-start h3{
+  position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-right: -50% !important;
+    transform: translate(-50%, -50%);
+    color: white
+}
+
+.css-0,
+.css-bojxom {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-right: -50% !important;
+    transform: translate(-50%, -50%);
+}
+
+/* ///////////////////// responsive //////////// */
+@media only screen and (max-width: 700px) {
+    .mid-home {
+        top: -200px;
+    }
+    p {
+        top: 5px;
+    }
+    .mid-home h1 {
+        font-weight: 900;
+        font-size: 90px;
+    }
+    i {
+        font-size: 30px;
+    }
+
+}
+
+/* ip678 */
+@media only screen and (max-width: 375px) {
+    .mid-home {
+        top: -100px;
+    }
+    p {
+        top: 5px;
+    }
+    .mid-home h1 {
+        font-weight: 900;
+        font-size: 70px;
+    }
+    i {
+        font-size: 25px;
+    }
+
 }
