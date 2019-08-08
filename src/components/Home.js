@@ -9,7 +9,7 @@ import Jello from 'react-reveal/Jello';
 class Home extends Component {
     state = {
         demo : true,
-        show: true,
+        count: 0,
         steps: [
             {
                 target: '.my-first-step',
@@ -80,8 +80,8 @@ class Home extends Component {
                   }}
                 />
                 <div className='mid-home'>
-                    <Jello >
-                        <h1>Kemal Aditya Z</h1>
+                    <Jello spy={this.state.count} >
+                        <h1 onClick={()=> this.setState({count : this.state.count +1})}>Kemal Aditya Z</h1>
                     </Jello>
                     <br/>
                     <p>I'm a <span>frontend-developer</span></p>
