@@ -1,13 +1,15 @@
 import React, {Component} from 'react'
 import resume from '../assets/resumeFe2019.pdf'
 import {SyncLoader} from 'react-spinners';
-import Joyride, {BeaconRenderProps} from 'react-joyride';
+import Joyride from 'react-joyride';
+import Jello from 'react-reveal/Jello';
 
 
 
 class Home extends Component {
     state = {
         demo : true,
+        show: true,
         steps: [
             {
                 target: '.my-first-step',
@@ -35,7 +37,10 @@ class Home extends Component {
         } else {
             localStorage.setItem('demo', true)
         }
+        setTimeout(()=>{  this.setState({show : false}); }, 3000);
     }
+
+
 
     loadPage = () =>{
         return (
@@ -54,7 +59,7 @@ class Home extends Component {
             <div>
                 <Joyride
                 run={this.state.demo}
-                debug={true}
+                // debug={true}
                 steps={this.state.steps} 
                 hideBackButton ={true}
                 disableOverlayClose ={true}
@@ -75,7 +80,9 @@ class Home extends Component {
                   }}
                 />
                 <div className='mid-home'>
-                    <h1>Kemal Aditya Z</h1>
+                    <Jello >
+                        <h1>Kemal Aditya Z</h1>
+                    </Jello>
                     <br/>
                     <p>I'm a <span>frontend-developer</span></p>
                 </div>
@@ -85,23 +92,24 @@ class Home extends Component {
                             <a 
                                 href='https://www.linkedin.com/in/kemal-aditya-z-b4276614a/'
                                 target='_blank'
+                                rel="noopener noreferrer"
                                 title="Kemal on LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
+                                <i className="fab fa-linkedin-in"></i>
                             </a>
                         </li>
                         <li className='my-2-step'>
-                            <a href='https://github.com/adityakemal' target="_blank">
-                                <i class="fab fa-github" title="Kemal on GitHub"></i>
+                            <a href='https://github.com/adityakemal' target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-github" title="Kemal on GitHub"></i>
                             </a>
                         </li>
                         <li className='my-3-step'>
                             <a href='mailto:kadityafikar@gmail.com'>
-                                <i class="fas fa-reply" title="Send email to Kemal"></i>
+                                <i className="fas fa-reply" title="Send email to Kemal"></i>
                             </a>
                         </li>
                         <li className='my-4-step'>
                             <a href={resume} download>
-                                <i class="fas fa-file-download" title="Download Kemal's resume"></i>
+                                <i className="fas fa-file-download" title="Download Kemal's resume"></i>
                             </a>
                         </li>
                     </ul>
