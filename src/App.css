@@ -60,7 +60,7 @@ ul {
 
 li {
     display: inline;
-    margin: 0  20px;
+    margin: 0  15px;
     color: black;
 }
 
@@ -82,7 +82,7 @@ i {
 }
 i:hover {
     transition: 0.4s;
-    font-size: 20px;
+    color: 25px;
 }
 
 .bg-load {

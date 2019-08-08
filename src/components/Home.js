@@ -29,6 +29,10 @@ class Home extends Component {
                 target: '.my-4-step',
                 content: `Download Kemal's resume`,
             },
+            {
+                target: '.my-5-step',
+                content: `Chat Kemal `,
+            },
           ],
         loading: false
     }
@@ -113,6 +117,15 @@ class Home extends Component {
                         <li className='my-4-step'>
                             <a href={resume} download>
                                 <i className="fas fa-file-download" title="Download Kemal's resume"></i>
+                            </a>
+                        </li>
+                        <li className='my-5-step'>
+                            <a 
+                                href='https://api.whatsapp.com/send?phone=6281296760145&text=Hai%20Kemal,%20'
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                title="Kemal on WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
                             </a>
                         </li>
                     </ul>
