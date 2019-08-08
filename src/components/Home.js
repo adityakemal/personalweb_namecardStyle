@@ -3,6 +3,7 @@ import resume from '../assets/resumeFe2019.pdf'
 import {SyncLoader} from 'react-spinners';
 import Joyride from 'react-joyride';
 import Jello from 'react-reveal/Jello';
+import Tada from 'react-reveal/Tada';
 
 
 
@@ -80,9 +81,11 @@ class Home extends Component {
                   }}
                 />
                 <div className='mid-home'>
-                    <Jello spy={this.state.count} >
-                        <h1 onClick={()=> this.setState({count : this.state.count +1})}>Kemal Aditya Z</h1>
-                    </Jello>
+                    <Tada>
+                        <Jello spy={this.state.count} >
+                            <h1 onClick={()=> this.setState({count : this.state.count +1})}>Kemal Aditya Z</h1>
+                        </Jello>
+                    </Tada>
                     <br/>
                     <p>I'm a <span>frontend-developer</span></p>
                 </div>
