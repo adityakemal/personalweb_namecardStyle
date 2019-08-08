@@ -54,11 +54,12 @@ ul {
     text-decoration: none;
     list-style: none;
     padding: 0;
+    /* margin: 0; */
 }
 
 li {
     display: inline;
-    margin: 20px;
+    margin: 0  20px;
     color: black;
 }
 
@@ -71,10 +72,12 @@ li {
 }
 
 i {
+    position: relative;
     transition: 0.3s;
     font-size: 30px;
+    width: 30px;
     color: white;
-
+    top: 5px
 }
 i:hover {
     transition: 0.4s;
@@ -125,6 +128,7 @@ i:hover {
 }
 
 /* ///////////////////// responsive //////////// */
+
 @media only screen and (max-width: 700px) {
     .mid-home {
         top: -200px;
@@ -159,3 +163,4 @@ i:hover {
     }
 
 }
+

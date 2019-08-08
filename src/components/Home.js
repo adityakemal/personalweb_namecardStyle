@@ -7,6 +7,7 @@ import Joyride, {BeaconRenderProps} from 'react-joyride';
 
 class Home extends Component {
     state = {
+        demo : true,
         steps: [
             {
                 target: '.my-first-step',
@@ -29,16 +30,12 @@ class Home extends Component {
         loading: false
     }
     componentDidMount(){
-        // this.setState({loading : false})
-        console.log(this.props);
-        
-    }
-
-    callback (data) {
-        if (data.action === 'close' && data.type === 'step:after') {
-          this.setState({ shouldRun: false });
+        if (localStorage.getItem('demo')) {
+            this.setState({demo : false})
+        } else {
+            localStorage.setItem('demo', true)
         }
-      }
+    }
 
     loadPage = () =>{
         return (
@@ -56,9 +53,7 @@ class Home extends Component {
         return (
             <div>
                 <Joyride
-                autoStart
-                run={true}
-                callback={this.callback}
+                run={this.state.demo}
                 debug={true}
                 steps={this.state.steps} 
                 hideBackButton ={true}
