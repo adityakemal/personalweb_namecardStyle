@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import resume from '../assets/resumeFe2019.pdf'
+import resume from '../assets/Kemal_Aditya_Zulfikar–Frontend2020.pdf'
 import {SyncLoader} from 'react-spinners';
 import Joyride from 'react-joyride';
 import Jello from 'react-reveal/Jello';
